@@ -10,7 +10,7 @@ class TextType(Enum):
     IMAGE = "image"
 
 class TextNode:
-    def __init__(self, text, text_type, url=None):
+    def __init__(self, text: str, text_type: TextType, url: str | None = None) -> None:
         self.text = text
         self.text_type = text_type
         self.url = url
@@ -23,11 +23,11 @@ class TextNode:
         )
 
         
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"TextNode({self.text}, {self.text_type}, {self.url}"
 
 
-def text_node_to_html_node(text_node):
+def text_node_to_html_node(text_node: TextNode) -> LeafNode:
     if text_node.text_type == TextType.TEXT:
         return LeafNode(None, text_node.text)
     if text_node.text_type == TextType.BOLD:
