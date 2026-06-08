@@ -1,4 +1,5 @@
 import re
+
 from textnode import TextNode, TextType
 
 
@@ -95,3 +96,5 @@ def text_to_textnodes(text):
     nodes = split_nodes_image(nodes)
     nodes = split_nodes_link(nodes)
     return nodes
+
+

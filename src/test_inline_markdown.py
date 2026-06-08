@@ -8,6 +8,7 @@ from inline_markdown import (
     text_to_textnodes,
 )
 
+
 from textnode import TextNode, TextType
 
 
@@ -189,6 +190,8 @@ class TestInlineMarkdown(unittest.TestCase):
             ],
             new_nodes
         )
+
+
 
 
 if __name__ == "__main__":
